@@ -74,7 +74,7 @@ Suggested improvement: networks over time
 
 ---
 
-Complexity! Lack of models for theoretical primitives. 
+Complexity! Lack of models for theoretical primitives.
 
 - space
 - time
@@ -122,6 +122,8 @@ Proposed algorithm:
 subject, transitive verb, A blanks B)
 
 2. Cluster scene particulates semantically to detect potential boundaries
+
+3. Multiple passes to detect quality / movement (by analogy with video).
 
 ---
 
