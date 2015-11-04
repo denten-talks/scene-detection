@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="author" content="Dennis Tenen">
+  <title>Scene Detection in Literary Fiction</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="reveal.js/css/reveal.css"/>
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" href="reveal.js/css/theme/simple.css" id="theme">
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal.js/css/print/pdf.css' : 'reveal.js/css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
+  <!--[if lt IE 9]>
+  <script src="reveal.js/lib/js/html5shiv.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section>
+    <h1 class="title">Scene Detection in Literary Fiction</h1>
+    <h2 class="author">Dennis Tenen</h2>
+    <h3 class="date">xpmethod.plaintext.in</h3>
+</section>
+
+<section><section id="since-our-last-time" class="titleslide slide level1"><h1>Since our Last Time</h1></section><section id="writing-a-book" class="slide level2">
+<h1>Writing a book</h1>
+<p>Microscope!</p>
+<figure>
+<img src="images/book1.png" alt="" />
+</figure>
+</section><section class="slide level2">
+
+<figure>
+<img src="images/book2.png" alt="" />
+</figure>
+</section><section id="running-a-lab" class="slide level2">
+<h1>Running a lab</h1>
+<figure>
+<img src="images/lab1.png" alt="" />
+</figure>
+</section><section class="slide level2">
+
+<p>Three research clusters:</p>
+<ul>
+<li>theory / method</li>
+<li>public discourse</li>
+<li>minimal computing</li>
+</ul>
+</section><section class="slide level2">
+
+<figure>
+<img src="images/lab2.png" alt="" />
+</figure>
+</section><section class="slide level2">
+
+<figure>
+<img src="images/lab3.png" alt="" />
+</figure>
+</section><section class="slide level2">
+
+<figure>
+<img src="images/lab4.png" alt="" />
+</figure>
+</section><section id="section" class="slide level2">
+<h1></h1>
+<p>Two projects of interest to this group:</p>
+<ol type="1">
+<li>Emerging Consensus in Scientific Literature (w/ Dan Jurafsky, Dan MacFarland of Stanford, and Laura Kurgan of Spatial Information Lab)</li>
+</ol>
+<figure>
+<img src="images/ss1.png" alt="" />
+</figure>
+</section><section class="slide level2">
+
+<ol start="2" type="1">
+<li>Scene Detection in Literary fiction (w/ Kathy Mckewan)</li>
+</ol>
+<figure>
+<img src="images/dames.png" alt="" />
+</figure>
+</section></section>
+<section><section id="scene-detection" class="titleslide slide level1"><h1>Scene Detection</h1></section><section id="original-paper" class="slide level2">
+<h1>Original Paper</h1>
+<ol type="1">
+<li>Raymond Williams</li>
+</ol>
+<figure>
+<img src="images/country.jpg" alt="" />
+</figure>
+</section><section class="slide level2">
+
+<ol start="2" type="1">
+<li>Bakhtin</li>
+</ol>
+<figure>
+<img src="images/bakhtin.jpg" alt="" />
+</figure>
+</section><section class="slide level2">
+
+<p>Suggested improvement: networks over time</p>
+</section><section class="slide level2">
+
+<p>Complexity! Lack of models for theoretical primitives.</p>
+<ul>
+<li>space</li>
+<li>time</li>
+<li>actors</li>
+<li>relations</li>
+</ul>
+</section><section class="slide level2">
+
+<p>Chunking. Preliminary observations:</p>
+<ul>
+<li>Typographical space (paragraph)</li>
+<li>Diegetic space (scene)</li>
+</ul>
+<p>How do the two relate?</p>
+</section><section class="slide level2">
+
+<p>What is a scene?</p>
+<p>Burke, Kenneth. <em>A Grammar of Motives</em>. University of California Press, 1969.</p>
+<figure>
+<img src="images/scene.png" alt="" />
+</figure>
+</section><section class="slide level2">
+
+<p>Rasheed, Z., and M. Shah. “Scene Detection in Hollywood Movies and TV Shows.” In 2003 <em>IEEE Computer Society Conference on Computer Vision and Pattern Recognition</em>, 2003. Proceedings, 2:II – 343–48 vol.2, 2003.</p>
+<figure>
+<img src="images/scene2.png" alt="" />
+</figure>
+</section><section class="slide level2">
+
+<p>Complications:</p>
+<ul>
+<li>actors can become scenes</li>
+<li>scenes can become actors</li>
+<li>scenes can involve mental states and ideologies</li>
+</ul>
+</section><section class="slide level2">
+
+<p>Proposed algorithm:</p>
+<ol type="1">
+<li><p>Separate actors from background through grammatical categories (object, subject, transitive verb, A blanks B)</p></li>
+<li><p>Cluster scene particulates semantically to detect potential boundaries</p></li>
+</ol>
+</section><section class="slide level2">
+
+<p>Ground truth, a stumbling block as always. To overcome: expert tagging, parallel copora. Any ideas?</p>
+</section><section class="slide level2">
+
+<p>We need better primitives to build more complex models!</p>
+</section></section>
+    </div>
+  </div>
+
+  <script src="reveal.js/lib/js/head.min.js"></script>
+  <script src="reveal.js/js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        // Vertical centering of slides
+        center: true,
+        // Transition style
+        transition: 'none', // none/fade/slide/convex/concave/zoom
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true },
+          { src: 'reveal.js/plugin/notes/notes.js', async: true }
+        ]
+      });
+    </script>
+    </body>
+</html>
